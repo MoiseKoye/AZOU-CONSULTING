@@ -1,0 +1,70 @@
+<footer class="bg-navy text-white pt-12 pb-6">
+  <div class="container-custom">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Colonne 1 : Logo & description -->
+      <div>
+        <!-- Logo -->
+        <app-logo height="h-20 mb-4"></app-logo>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Cabinet de conseil stratégique basé à Libreville, Gabon. 
+          Nous accompagnons les organisations dans leurs transformations économiques et institutionnelles.
+        </p>
+      </div>
+      
+      <!-- Colonne 2 : Liens rapides -->
+      <div>
+        <h4 class="font-semibold mb-4 text-gold">Liens rapides</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a routerLink="/" class="hover:text-gold transition">Accueil</a></li>
+          <li><a routerLink="/about" class="hover:text-gold transition">À propos</a></li>
+          <li><a routerLink="/expertise" class="hover:text-gold transition">Expertises</a></li>
+          <li><a routerLink="/services" class="hover:text-gold transition">Services</a></li>
+          <li><a routerLink="/sectors" class="hover:text-gold transition">Secteurs</a></li>
+          <li><a routerLink="/contact" class="hover:text-gold transition">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 3 : Contact -->
+      <div>
+        <h4 class="font-semibold mb-4 text-gold">Contact</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+            <span>Libreville – Gabon</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fas fa-envelope text-gold mt-1"></i>
+            <a href="mailto:liacediwa&#64;gmail.com" class="hover:text-gold transition">liacediwa&#64;gmail.com</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fas fa-phone-alt text-gold mt-1"></i>
+            <span>+241 XX XX XX XX</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Colonne 4 : Réseaux sociaux -->
+      <div>
+        <h4 class="font-semibold mb-4 text-gold">Suivez-nous</h4>
+        <div class="flex space-x-4">
+          <a *ngFor="let social of socialLinks" 
+             [href]="social.url" 
+             target="_blank"
+             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-all duration-300">
+            <i [class]="social.icon + ' text-lg'"></i>
+          </a>
+        </div>
+        <div class="mt-6">
+          <p class="text-gray-400 text-sm">
+            <i class="fas fa-clock mr-2 text-gold"></i>
+            Lun - Ven: 9h00 - 18h00
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+      <p>&copy; {{ currentYear }} AZOUÈ CONSULTING. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>

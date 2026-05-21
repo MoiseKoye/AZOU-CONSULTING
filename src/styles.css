@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0A1927;
+  --black: #000000;
+  --white: #FFFFFF;
+  --gold: #C6A43F;
+  --emerald: #2E5A4B;
+  --gray-light: #F5F5F5;
+  --gray-dark: #333333;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @apply bg-white text-gray-900;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-600 max-w-3xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-gold text-black font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-gold text-gold font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-gold hover:text-black;
+  }
+  .btn-dark {
+    @apply bg-navy text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-navy/90 hover:shadow-lg;
+  }
+}

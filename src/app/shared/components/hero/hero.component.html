@@ -1,0 +1,13 @@
+<section class="relative overflow-hidden bg-gradient-to-br from-navy to-bleu-nuit text-white pt-32 pb-20">
+  <div class="container-custom">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" [innerHTML]="title"></h1>
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed">{{ subtitle }}</p>
+      <div class="mt-8" *ngIf="showButton">
+        <a [routerLink]="buttonLink">
+          <app-button [type]="buttonType">{{ buttonText }}</app-button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

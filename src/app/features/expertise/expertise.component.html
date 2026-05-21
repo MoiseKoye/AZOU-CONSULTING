@@ -1,0 +1,97 @@
+<!-- Hero Section -->
+<app-hero 
+  title="Nos <span class='text-gold'>expertises</span>"
+  subtitle="Cinq domaines d'expertise complémentaires pour accompagner vos projets de la conception à la réalisation, avec une approche sur mesure et orientée impact."
+  buttonText="Nous contacter"
+  buttonLink="/contact">
+</app-hero>
+
+<!-- Signature institutionnelle -->
+<section class="py-12 bg-white border-b">
+  <div class="container-custom">
+    <div class="flex flex-wrap justify-center gap-6 text-center">
+      <span class="text-navy font-semibold">Stratégie</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Conseil</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Investissement</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Finance</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Développement</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Partenariats</span>
+      <span class="text-gold">•</span>
+      <span class="text-navy font-semibold">Gestion de Projets</span>
+    </div>
+  </div>
+</section>
+
+<!-- Liste des expertises (accordéon) -->
+<section class="py-20 bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Domaines d'expertise</h2>
+      <p class="section-subtitle">
+        Une approche multidimensionnelle au service de votre réussite
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div *ngFor="let area of expertiseAreas" 
+           class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+        
+        <!-- Entête de l'accordéon -->
+        <button (click)="toggleAccordion(area.id)" 
+                class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
+              <i [class]="'fas ' + area.icon + ' text-xl text-gold'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy">{{ area.title }}</h3>
+          </div>
+          <i [class]="activeId === area.id ? 'fas fa-chevron-up text-gold' : 'fas fa-chevron-down text-gray-400'"></i>
+        </button>
+
+        <!-- Contenu de l'accordéon -->
+        <div *ngIf="activeId === area.id" 
+             class="p-6 pt-0 border-t border-gray-100">
+          <p class="text-gray-600 mb-4 leading-relaxed">{{ area.description }}</p>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div *ngFor="let feature of area.features" 
+                 class="flex items-center gap-2 text-gray-700">
+              <i class="fas fa-check-circle text-gold text-sm"></i>
+              <span>{{ feature }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-navy">
+  <div class="container-custom text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      Un projet nécessitant notre accompagnement ?
+    </h2>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+      Mettez notre expertise à votre service et bénéficiez de solutions sur mesure.
+    </p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a routerLink="/contact">
+        <app-button type="primary">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          Nous contacter
+        </app-button>
+      </a>
+      <a routerLink="/services">
+        <app-button type="outline">
+          <i class="fas fa-cogs mr-2"></i>
+          Découvrir nos services
+        </app-button>
+      </a>
+    </div>
+  </div>
+</section>

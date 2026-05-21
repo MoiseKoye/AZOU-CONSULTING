@@ -1,0 +1,78 @@
+<!-- Hero Section -->
+<app-hero 
+  title="Secteurs <span class='text-gold'>d'intervention</span>"
+  subtitle="AZOUÈ CONSULTING intervient dans de nombreux secteurs stratégiques pour accompagner la transformation économique et institutionnelle de l'Afrique centrale."
+  buttonText="Nous contacter"
+  buttonLink="/contact">
+</app-hero>
+
+<!-- Grille des secteurs -->
+<section class="py-20 bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Nos secteurs d'excellence</h2>
+      <p class="section-subtitle">Une expertise sectorielle reconnue au service de vos projets</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div *ngFor="let sector of sectors" (click)="openDetail(sector)" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
+        <div class="h-1 bg-gold"></div>
+        <div class="p-6">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold transition-colors duration-300">
+            <i [class]="'fas ' + sector.icon + ' text-2xl text-gold group-hover:text-black transition-colors duration-300'"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy mb-2 group-hover:text-gold transition-colors">{{ sector.title }}</h3>
+          <p class="text-gray-600 text-sm mb-4">{{ sector.description }}</p>
+          <span class="text-gold text-sm font-semibold inline-flex items-center gap-1">En savoir plus <i class="fas fa-arrow-right text-xs"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistiques -->
+<section class="py-16 bg-navy">
+  <div class="container-custom">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-4xl md:text-5xl font-bold text-gold mb-2">10+</div><p class="text-gray-300">Secteurs d'intervention</p></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-gold mb-2">5</div><p class="text-gray-300">Domaines d'expertise</p></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-gold mb-2">50+</div><p class="text-gray-300">Projets accompagnés</p></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-gold mb-2">10+</div><p class="text-gray-300">Pays partenaires</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div *ngIf="activeSector" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" (click)="closeDetail()">
+  <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto" (click)="$event.stopPropagation()">
+    <div class="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center">
+          <i [class]="'fas ' + activeSector.icon + ' text-xl text-gold'"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-navy">{{ activeSector.title }}</h3>
+      </div>
+      <button (click)="closeDetail()" class="text-gray-400 hover:text-gold transition text-2xl"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="p-6">
+      <p class="text-gray-600 mb-4 leading-relaxed">{{ activeSector.description }}</p>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <h4 class="font-bold text-navy mb-2">Détails du secteur</h4>
+        <p class="text-gray-600">{{ activeSector.details }}</p>
+      </div>
+      <div class="bg-gold/10 p-4 rounded-lg">
+        <h4 class="font-bold text-navy mb-2">Comment pouvons-nous vous aider ?</h4>
+        <p class="text-gray-600">Dans le secteur {{ activeSector.title }}, AZOUÈ CONSULTING vous accompagne avec une expertise pointue et une connaissance approfondie des dynamiques locales et régionales.</p>
+        <div class="mt-4"><a routerLink="/contact"><app-button type="primary">Discuter de mon projet</app-button></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="py-16 bg-white">
+  <div class="container-custom text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Votre secteur n'est pas listé ?</h2>
+    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Notre expertise est transverse. Contactez-nous pour discuter de votre projet spécifique.</p>
+    <a routerLink="/contact"><app-button type="primary"><i class="fas fa-envelope mr-2"></i>Nous contacter</app-button></a>
+  </div>
+</section>

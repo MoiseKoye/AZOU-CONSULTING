@@ -1,0 +1,76 @@
+routerLinkActive {
+  color: #C6A43F;
+}
+
+/* Styles spécifiques au Header */
+
+/* Pour les écrans entre 1024px et 1150px */
+@media (min-width: 1024px) and (max-width: 1150px) {
+  /* Réduire l'espacement entre les liens */
+  nav {
+    gap: 0.5rem !important;
+  }
+  
+  /* Réduire la taille du texte des liens */
+  nav a {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  /* Réduire la taille du bouton CTA */
+  .btn-primary {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Réduire le padding du container */
+  .container-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Pour les écrans entre 1150px et 1280px */
+@media (min-width: 1150px) and (max-width: 1280px) {
+  /* Espacement moyen */
+  nav {
+    gap: 0.75rem !important;
+  }
+  
+  nav a {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* S'assurer que les liens ne passent jamais à la ligne */
+nav a {
+  white-space: nowrap;
+}
+
+/* Styles spécifiques au Header */
+
+/* Pour les écrans entre 1024px et 1093px */
+@media (min-width: 1024px) and (max-width: 1093px) {
+  /* Bouton CTA du header - plus compact */
+  header .btn-primary {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Réduire l'espacement entre les liens */
+  nav {
+    gap: 0.5rem !important;
+  }
+  
+  /* Réduire la taille des liens */
+  nav a {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0 !important;
+  }
+  
+  /* Container moins large */
+  .container-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

@@ -1,0 +1,9 @@
+<button 
+  [class.btn-primary]="type === 'primary'"
+  [class.btn-outline]="type === 'outline'"
+  [class.btn-dark]="type === 'dark'"
+  [disabled]="disabled || isLoading"
+  class="font-semibold py-3 px-6 rounded-md transition-all duration-300 inline-flex items-center gap-2">
+  <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+  <ng-content></ng-content>
+</button>

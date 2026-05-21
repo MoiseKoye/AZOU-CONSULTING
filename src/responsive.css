@@ -1,0 +1,34 @@
+/* Tablettes */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .container-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+  
+  .btn-primary, .btn-outline {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Grands écrans */
+@media (min-width: 1440px) {
+  .container-custom {
+    max-width: 1280px !important;
+  }
+}

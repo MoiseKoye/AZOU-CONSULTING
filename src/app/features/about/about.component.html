@@ -1,0 +1,144 @@
+<!-- Hero Section avec composant réutilisable -->
+<app-hero 
+  title="À propos de <span class='text-gold'>AZOUÈ CONSULTING</span>"
+  subtitle="Cabinet africain de conseil stratégique et d'ingénierie de projets, orienté résultats, impact et transformation."
+  buttonText="Nous contacter"
+  buttonLink="/contact">
+</app-hero>
+
+<!-- Présentation -->
+<section class="py-20 bg-white">
+  <div class="container-custom">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="section-title text-left">Qui sommes-nous ?</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          <span class="font-bold text-navy">AZOUÈ CONSULTING</span> est un cabinet de conseil stratégique basé à Libreville, au Gabon, spécialisé dans l'accompagnement des institutions, entreprises, investisseurs, porteurs de projets et organisations internationales.
+        </p>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          Le cabinet intervient à l'intersection de la stratégie, l'investissement, le développement économique, les partenariats, la finance et la gestion de projets à fort impact.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Nous accompagnons nos partenaires dans la structuration, la transformation et le déploiement de projets à dimension nationale, régionale et internationale, avec une expertise particulière sur l'Afrique centrale.
+        </p>
+      </div>
+      <div class="bg-gold/10 p-8 rounded-lg">
+        <div class="mb-6">
+          <i class="fas fa-quote-left text-4xl text-gold"></i>
+        </div>
+        <p class="text-xl italic text-navy mb-4">
+          "Construire un cabinet africain de référence capable d'accompagner les grandes transformations économiques, institutionnelles et territoriales du continent."
+        </p>
+        <p class="text-gold font-semibold">— Notre Vision</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="py-20 bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Notre Mission</h2>
+      <p class="section-subtitle">
+        Aider les organisations publiques et privées à atteindre leurs objectifs
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-project-diagram text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Structurer leurs projets</h3>
+        <p class="text-gray-600">Une méthodologie rigoureuse pour des projets solides et viables.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-hand-holding-usd text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Attirer des financements</h3>
+        <p class="text-gray-600">Un accompagnement sur mesure pour mobiliser les ressources nécessaires.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-handshake text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Créer des partenariats stratégiques</h3>
+        <p class="text-gray-600">Le bon réseau pour des alliances porteuses de valeur.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-chart-line text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Développer leur croissance</h3>
+        <p class="text-gray-600">Des stratégies adaptées pour un développement durable.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-shield-alt text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Sécuriser leurs investissements</h3>
+        <p class="text-gray-600">Une expertise pour minimiser les risques et maximiser les retours.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <i class="fas fa-globe text-3xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-navy mb-2">Accélérer leur impact</h3>
+        <p class="text-gray-600">Des solutions concrètes pour un impact économique et social mesurable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi nous choisir -->
+<section class="py-20 bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Pourquoi choisir <span class="text-gold">AZOUÈ CONSULTING</span> ?</h2>
+      <p class="section-subtitle">Ce qui fait notre différence</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let item of whyUs" class="text-center p-6 hover:shadow-lg transition rounded-lg group">
+        <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold transition-colors duration-300">
+          <i [class]="'fas ' + item.icon + ' text-2xl text-gold group-hover:text-black transition-colors duration-300'"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navy mb-3">{{ item.title }}</h3>
+        <p class="text-gray-600">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nos valeurs -->
+<section class="py-20 bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Nos valeurs</h2>
+      <p class="section-subtitle">Des principes qui guident notre action au quotidien</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span *ngFor="let value of values" class="px-6 py-3 bg-white rounded-full shadow-sm text-navy font-semibold hover:shadow-md hover:text-gold transition">
+        {{ value.title }}
+      </span>
+    </div>
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let value of values" class="bg-white p-6 rounded-lg shadow-sm">
+        <h4 class="text-lg font-bold text-navy mb-2">{{ value.title }}</h4>
+        <p class="text-gray-600 text-sm">{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-navy">
+  <div class="container-custom text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Prêt à transformer vos projets ?</h2>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+      Contactez-nous pour échanger sur vos besoins et découvrir comment nous pouvons vous accompagner.
+    </p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a routerLink="/contact">
+        <app-button type="primary">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          Prendre rendez-vous
+        </app-button>
+      </a>
+      <a routerLink="/expertise">
+        <app-button type="outline">
+          <i class="fas fa-arrow-right mr-2"></i>
+          Découvrir nos expertises
+        </app-button>
+      </a>
+    </div>
+  </div>
+</section>

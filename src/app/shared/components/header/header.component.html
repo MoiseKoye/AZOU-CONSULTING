@@ -1,0 +1,60 @@
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300">
+  <div class="container-custom py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <app-logo height="h-10 md:h-12" [showText]="true"></app-logo>
+    
+    <!-- Desktop Navigation - visible à partir de 1024px -->
+    <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+      <a routerLink="/" routerLinkActive="text-gold font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">Accueil</a>
+      <a routerLink="/about" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">À propos</a>
+      <a routerLink="/expertise" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">Expertises</a>
+      <a routerLink="/services" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">Services</a>
+      <a routerLink="/sectors" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">Secteurs</a>
+      <a routerLink="/contact" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors text-sm lg:text-base">Contact</a>
+    </nav>
+    
+    <!-- CTA Button - visible à partir de 1024px -->
+    <div class="hidden lg:block">
+      <a routerLink="/contact">
+        <app-button type="primary">
+          <i class="fas fa-calendar-alt mr-2"></i>Prendre rendez-vous
+        </app-button>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Button - visible jusqu'à 1024px -->
+    <button class="lg:hidden text-2xl text-navy" (click)="toggleMobileMenu()">
+      <i [class]="isMobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation - Menu latéral (inchangé) -->
+  <div *ngIf="isMobileMenuOpen" class="fixed inset-0 z-50 lg:hidden">
+    <div class="absolute inset-0 bg-black/70 transition-opacity duration-500" (click)="closeMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-72 bg-white shadow-xl transform transition-transform duration-500 ease-out"
+         [class.translate-x-0]="isMobileMenuOpen"
+         [class.translate-x-full]="!isMobileMenuOpen">
+      <!-- contenu du menu mobile (inchangé) -->
+      <div class="p-6">
+        <div class="flex justify-end mb-8">
+          <button (click)="closeMobileMenu()" class="text-2xl text-gray-400 hover:text-gold transition-colors">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-gray-700 hover:text-gold transition-colors py-2">Accueil</a>
+          <a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors py-2">À propos</a>
+          <a routerLink="/expertise" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors py-2">Expertises</a>
+          <a routerLink="/services" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors py-2">Services</a>
+          <a routerLink="/sectors" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors py-2">Secteurs</a>
+          <a routerLink="/contact" (click)="closeMobileMenu()" routerLinkActive="text-gold font-semibold" class="text-gray-700 hover:text-gold transition-colors py-2">Contact</a>
+          <div class="pt-6">
+            <a routerLink="/contact" (click)="closeMobileMenu()">
+              <app-button type="primary" class="w-full">Prendre rendez-vous</app-button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
