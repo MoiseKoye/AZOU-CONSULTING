@@ -26,7 +26,9 @@ jobs:
         run: npm ci
 
       - name: Build Application
-        run: npx ng build --base-href /AZOU-CONSULTING/
+        run: |
+          npx ng build --base-href /AZOU-CONSULTING/
+          cp dist/azoue-consulting/browser/index.html dist/azoue-consulting/browser/404.html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
