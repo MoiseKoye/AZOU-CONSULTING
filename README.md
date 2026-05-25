@@ -1,27 +1,76 @@
-# AzoueConsulting
+# AZOUÈ CONSULTING – Site vitrine
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Site web vitrine développé avec **Angular 17+**, **Tailwind CSS**, **Font Awesome** et une architecture moderne en composants standalone.
 
-## Development server
+## 📦 Technologies utilisées
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 17.3.17 (standalone components)
+- Tailwind CSS
+- Font Awesome
+- TypeScript
 
-## Code scaffolding
+## 🎨 Identité visuelle
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Couleurs** : Bleu nuit (`#0A1927`), Or (`#C6A43F`), Vert émeraude (`#2E5A4B`)
+- **Police** : [Inter](https://fonts.google.com/specimen/Inter)
 
-## Build
+## 📁 Architecture du projet
+src/
+├── app/
+│ ├── core/ # Services (SEO, etc.)
+│ ├── features/ # Pages : home, about, expertise, services, sectors, contact
+│ ├── shared/ # Composants réutilisables
+│ │ ├── components/ # button, card, header, footer, hero, banner, logo, scroll-to-top
+│ │ └── models/ # Interfaces TypeScript
+│ ├── app.component.ts
+│ ├── app.routes.ts
+│ └── app.config.ts
+├── assets/ # Images, logo, favicon
+├── styles.css # Styles globaux + variables + classes utilitaires
+├── responsive.css # Media queries globales
+└── index.html
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## 🧩 Composants principaux
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Composant | Rôle |
+|-----------|------|
+| `HeaderComponent` | Navigation desktop / mobile (menu latéral) |
+| `FooterComponent` | Liens, contact, réseaux sociaux |
+| `HeroComponent` | Bannière avec image de fond, overlay, CTA |
+| `BannerComponent` | Version pleine largeur pour l’accueil |
+| `CardComponent` | Carte réutilisable (expertise, secteurs) |
+| `ButtonComponent` | Boutons avec variantes (primary, outline, dark) |
+| `LogoComponent` | Logo SVG/image réutilisable |
+| `ScrollToTopComponent` | Bouton de retour en haut |
 
-## Running end-to-end tests
+## 📄 Pages disponibles
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+| Route | Page |
+|-------|------|
+| `/` | Accueil (bannière + sections) |
+| `/about` | À propos (vision, mission, valeurs) |
+| `/expertise` | Domaines d’expertise (accordéon) |
+| `/services` | Services par cible (entreprises, institutions, investisseurs) |
+| `/sectors` | Secteurs d’intervention (grille modale) |
+| `/contact` | Coordonnées + carte + FAQ |
 
-## Further help
+## 🚀 Développement
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+ng serve
+
+# Build de production
+ng build
+
+📱 Responsive
+
+    Mobile (< 768px) : menu latéral, marges réduites
+
+    Tablette (768px - 1024px) : adaptation des grilles
+
+    Desktop (≥ 1024px) : affichage complet

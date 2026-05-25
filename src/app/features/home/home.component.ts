@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../../shared/components/button/button.component';
-import { HeroComponent } from '../../shared/components/hero/hero.component';
 import { CardComponent } from '../../shared/components/card/card.component';
+import { BannerComponent } from '../../shared/components/banner/banner.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ButtonComponent, HeroComponent, CardComponent],
+  imports: [CommonModule, RouterModule, ButtonComponent, BannerComponent, CardComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

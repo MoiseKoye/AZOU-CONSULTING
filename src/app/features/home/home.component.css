@@ -47,3 +47,10 @@
     animation: none;
   }
 }
+
+/* Masquer l'image sur tablette et mobile */
+@media (max-width: 1024px) {
+  .home-image {
+    display: none;
+  }
+}

@@ -1,8 +1,12 @@
-<section class="relative overflow-hidden bg-gradient-to-br from-navy to-bleu-nuit text-white pt-32 pb-20">
-  <div class="container-custom">
+<section class="relative w-full bg-cover bg-center bg-no-repeat flex items-center pt-32 lg:pt-40"
+         [style.backgroundImage]="backgroundImage ? 'url(' + backgroundImage + ')' : 'none'">
+  
+  <div class="absolute inset-0 bg-navy/40"></div>
+  
+  <div class="relative z-10 container-custom py-16 md:py-24 lg:py-32">
     <div class="max-w-3xl">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" [innerHTML]="title"></h1>
-      <p class="text-lg md:text-xl text-gray-300 leading-relaxed">{{ subtitle }}</p>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white" [innerHTML]="title"></h1>
+      <p class="text-base md:text-lg lg:text-xl text-white leading-relaxed">{{ subtitle }}</p>
       <div class="mt-8" *ngIf="showButton">
         <a [routerLink]="buttonLink">
           <app-button [type]="buttonType">{{ buttonText }}</app-button>

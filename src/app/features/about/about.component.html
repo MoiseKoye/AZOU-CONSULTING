@@ -1,9 +1,10 @@
 <!-- Hero Section avec composant réutilisable -->
 <app-hero 
-  title="À propos de <span class='text-gold'>AZOUÈ CONSULTING</span>"
+  [title]="'À propos de <span class=\'text-gold\'>AZOUÈ CONSULTING</span>'"
   subtitle="Cabinet africain de conseil stratégique et d'ingénierie de projets, orienté résultats, impact et transformation."
   buttonText="Nous contacter"
-  buttonLink="/contact">
+  buttonLink="/contact"
+  backgroundImage="assets/images/about-bg.png">
 </app-hero>
 
 <!-- Présentation -->
@@ -39,6 +40,7 @@
 <section class="py-20 bg-gray-50">
   <div class="container-custom">
     <div class="text-center mb-12">
+      <i class="fas fa-bullseye text-5xl text-gold mb-4"></i>
       <h2 class="section-title">Notre Mission</h2>
       <p class="section-subtitle">
         Aider les organisations publiques et privées à atteindre leurs objectifs

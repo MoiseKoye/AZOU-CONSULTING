@@ -17,4 +17,5 @@ export class HeroComponent {
   @Input() buttonLink: string = '/contact';
   @Input() buttonType: 'primary' | 'outline' | 'dark' = 'primary';
   @Input() showButton: boolean = true;
+  @Input() backgroundImage: string = '';
 }
