@@ -1,6 +1,14 @@
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+
+<ng-container *ngIf="isLoading; else content">
+  <app-skeleton-loader></app-skeleton-loader>
+</ng-container>
+
+<ng-template #content>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</ng-template>
+
 <app-footer></app-footer>
 <app-scroll-to-top></app-scroll-to-top>

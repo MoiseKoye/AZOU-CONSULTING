@@ -38,13 +38,16 @@ body {
   }
   
   .btn-primary {
-    @apply bg-gold text-black font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg;
+    @apply bg-navy text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-navy/90 hover:shadow-lg;
   }
   
   .btn-outline {
-    @apply border-2 border-gold text-gold font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-gold hover:text-black;
+    @apply border-2 border-navy text-navy font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-navy hover:text-white;
   }
   .btn-dark {
-    @apply bg-navy text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-navy/90 hover:shadow-lg;
+    @apply bg-gold text-black font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-gold/90 hover:shadow-lg;
   }
+}
+.btn-light {
+  @apply bg-white text-navy font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-gray-100 hover:shadow-lg;
 }

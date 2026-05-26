@@ -1,0 +1,31 @@
+<div class="min-h-screen bg-gray-50 animate-pulse">
+  <!-- Hero skeleton -->
+  <div class="w-full h-[60vh] bg-gray-200"></div>
+  
+  <div class="container-custom py-12">
+    <!-- Titre section -->
+    <div class="text-center mb-12">
+      <div class="h-8 bg-gray-200 rounded w-1/3 mx-auto mb-4"></div>
+      <div class="h-4 bg-gray-200 rounded w-2/3 mx-auto"></div>
+    </div>
+    
+    <!-- Grille de cartes (4 cartes) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let i of [1,2,3,4]" class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
+        <div class="h-5 bg-gray-200 rounded w-3/4 mx-auto mb-3"></div>
+        <div class="h-3 bg-gray-200 rounded w-full mb-2"></div>
+        <div class="h-3 bg-gray-200 rounded w-5/6"></div>
+      </div>
+    </div>
+    
+    <!-- Deuxième grille -->
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <div *ngFor="let i of [1,2,3]" class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="h-4 bg-gray-200 rounded w-3/4 mb-3"></div>
+        <div class="h-3 bg-gray-200 rounded w-full mb-2"></div>
+        <div class="h-3 bg-gray-200 rounded w-5/6"></div>
+      </div>
+    </div>
+  </div>
+</div>

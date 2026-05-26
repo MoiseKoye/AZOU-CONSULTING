@@ -1,7 +1,7 @@
 <section class="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center"
          [style.backgroundImage]="'url(' + backgroundImage + ')'">
   
-  <!-- Overlay sombre pour lisibilité -->
+  <!-- Overlay sombre -->
   <div class="absolute inset-0 bg-navy/50"></div>
   
   <!-- Contenu -->
@@ -12,10 +12,10 @@
     </p>
     <div class="flex flex-wrap gap-4 justify-center">
       <a [routerLink]="buttonLink">
-        <app-button type="primary">{{ buttonText }}</app-button>
+        <app-button type="dark">{{ buttonText }}</app-button>
       </a>
       <a [routerLink]="secondaryButtonLink">
-        <app-button type="outline">{{ secondaryButtonText }}</app-button>
+        <app-button type="dark">{{ secondaryButtonText }}</app-button>
       </a>
     </div>
   </div>

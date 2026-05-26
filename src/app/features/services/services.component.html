@@ -86,15 +86,25 @@
 </section>
 
 <!-- CTA -->
-<section class="py-16 bg-gold">
+<section class="py-16 bg-gray-50">
   <div class="container-custom text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Vous avez un projet ?</h2>
-    <p class="text-black/80 mb-8 max-w-2xl mx-auto">Discutons de vos besoins et découvrons comment nous pouvons vous accompagner.</p>
-    <a routerLink="/contact">
-      <app-button type="dark">
-        <i class="fas fa-calendar-alt mr-2"></i>
-        Prendre rendez-vous
-      </app-button>
-    </a>
+    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Vous avez un projet ?</h2>
+    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+      Discutons de vos besoins et découvrons comment nous pouvons vous accompagner.
+    </p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a routerLink="/contact">
+        <app-button type="primary">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          Prendre rendez-vous
+        </app-button>
+      </a>
+      <a routerLink="/expertise">
+        <app-button type="outline">
+          <i class="fas fa-arrow-right mr-2"></i>
+          Découvrir nos expertises
+        </app-button>
+      </a>
+    </div>
   </div>
 </section>
