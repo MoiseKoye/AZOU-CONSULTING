@@ -12,7 +12,7 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class BannerComponent {
   @Input() title: string = 'Stratégie · Conseil · <span class="text-gold">Investissement</span>';
-  @Input() subtitle: string = 'AZOUÈ CONSULTING accompagne les acteurs publics et privés dans la conception, le financement et la mise en œuvre de projets stratégiques à fort impact économique et social.';
+  @Input() subtitle: string = 'AZOUÈ CONSULTING accompagne les acteurs publics et privés dans la conception, la structuration, l\'intermédiation et la mise en œuvre de projets stratégiques à fort impact économique et social.';
   @Input() buttonText: string = 'Nos expertises';
   @Input() buttonLink: string = '/expertise';
   @Input() secondaryButtonText: string = 'Prendre rendez-vous';
